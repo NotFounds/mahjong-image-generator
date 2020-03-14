@@ -48,9 +48,9 @@ func (tiles Tiles) GetTile(t Tile) image.Image {
 		"S": 166,
 		"W": 332,
 		"N": 497,
-		"C": 663,
+		"P": 663,
 		"F": 829,
-		"P": 995,
+		"C": 995,
 	}
 	offsetY := map[string]int{
 		"m": 0,
@@ -60,9 +60,9 @@ func (tiles Tiles) GetTile(t Tile) image.Image {
 		"S": 783,
 		"W": 783,
 		"N": 783,
-		"C": 783,
-		"F": 783,
 		"P": 783,
+		"F": 783,
+		"C": 783,
 	}
 
 	x := offsetX[t.i]
