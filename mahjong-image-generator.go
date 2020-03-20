@@ -99,5 +99,8 @@ func Parse(query string) []Tile {
 			tiles = append(tiles, Tile{p, p})
 		}
 	}
+	if len(query) != len(tiles) {
+		return []Tile{}
+	}
 	return tiles
 }
