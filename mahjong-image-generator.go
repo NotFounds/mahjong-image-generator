@@ -4,6 +4,7 @@ import (
 	"image"
 	"image/color"
 	"regexp"
+  "strings"
 
 	"github.com/disintegration/imaging"
 )
@@ -99,7 +100,11 @@ func Parse(query string) []Tile {
 			tiles = append(tiles, Tile{p, p})
 		}
 	}
-	if len(query) != len(tiles) {
+
+  filtered := strings.ReplaceAll(query, "m", "")
+  filtered = strings.ReplaceAll(filtered, "p", "")
+  filtered = strings.ReplaceAll(filtered, "s", "")
+	if len(filtered) != len(tiles) {
 		return []Tile{}
 	}
 	return tiles
